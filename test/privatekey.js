@@ -320,7 +320,7 @@ describe('PrivateKey', function () {
       privkey
         .inspect()
         .should.equal(
-          '<PrivateKey: 951msVyBzxWDQrPzXE1HTfvg5zm6K9fSJ7hJbdX5dLxcGAv5omS, network: testnet>'
+          '<PrivateKey: c3877bf30c4efca3bdd66b0b92433a8a58bcb3915e3bb51c2faa9ef92b55fe75, network: testnet>'
         );
     });
 
@@ -329,7 +329,7 @@ describe('PrivateKey', function () {
       privkey
         .inspect()
         .should.equal(
-          '<PrivateKey: 7eFKZu9ukdb8RvdyXg4URe118AkwzCD2fxdiTM7ffpvECydN3PR, network: livenet, uncompressed>'
+          '<PrivateKey: 2f832589942d5ffff5167124e1c428755e250f211714e87de8be73bd4a864acf, network: livenet, uncompressed>'
         );
     });
   });
@@ -446,7 +446,7 @@ describe('PrivateKey', function () {
       privkey
         .toString()
         .should.equal(
-          '7eFKZu9ukdb8RvdyXg4URe118AkwzCD2fxdiTM7ffpvECydN3PR'
+          '2f832589942d5ffff5167124e1c428755e250f211714e87de8be73bd4a864acf'
         );
     });
   });

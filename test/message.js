@@ -14,13 +14,13 @@ var Message = bitcore.Message;
 
 describe('Message', function () {
   var address = 'nKQoud5ZEoaF8TmUFpRqeWGXLw5NeRez89';
-  var badAddress = 'nj3v6A6gQkiRbChbGwvahiFZ6EfpYxk9na';
+  var badAddress = 'nCE5UypKbxCfo5qKpMk2FDWXqoMNiZZAHC';
   var privateKey = bitcore.PrivateKey.fromWIF(
     'WKQCxDCKqaVdo1kCWPQL3kK1Ye4yhSU6NxZ3yHnRgNVwHQ3XsbX5'
   );
   var text = 'hello, world';
   var signatureString =
-    'HzLE2G7R/O/i2ECFHdaY2ITkq+/ny0gcZySki4oCLejWX35nM+As2T7jz9LIfMTRWlC0ZxAJK1gOlkwQ362km6M=';
+    'H6ozxda8G12UiGef1xSzzoWPvbRj2xy/hXKlFJVmsJq9dswj3MzV06ThRj4s3JtHp5KR9TzgxUWl6Z9e0n7d3LE=';
 
   var badSignatureString =
     'H69qZ4mbZCcvXk7CWjptD5ypnYVLvQ3eMXLM8+1gX21SLH/GaFnAjQrDn37+TDw79i9zHhbiMMwhtvTwnPigZ6k=';
@@ -101,7 +101,7 @@ describe('Message', function () {
     verified.should.equal(true);
   });
 
-  it('will not verify with address mismatch', function () {
+  it('will not verify with address mismatch' , function () {
     var message10 = new Message(text);
     var verified = message10.verify(badAddress, signatureString);
     should.exist(message10.error);

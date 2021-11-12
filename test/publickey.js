@@ -64,18 +64,18 @@ describe('PublicKey', function () {
     it('problematic secp256k1 public keys', function () {
       var knownKeys = [
         {
-          wif: 'XEwen6QcoX8MUF3Hg3V8QQH65BAozu3Fhfb2uS8wXDW8tCsm8zQ9',
-          priv: '6d1229a6b24c2e775c062870ad26bc261051e0198c67203167273c7c62538846',
-          pub: '03d6106302d2698d6a41e9c9a114269e7be7c6a0081317de444bb2980bf9265a01',
-          pubx: 'd6106302d2698d6a41e9c9a114269e7be7c6a0081317de444bb2980bf9265a01',
-          puby: 'e05fb262e64b108991a29979809fcef9d3e70cafceb3248c922c17d83d66bc9d',
+          wif: 'cZ3n7ZxPY4fyd55wWX8hKvYZYEVeysStHLnz69M5HJBTvchKvymW',
+          priv: '56240af369921402d83a44700245ee12fa04b7bae2d6b4cd8b2f276859e51e6a',
+          pub: '039611f38f43d91c8b7af296d99a15bbde28eed632f8b36d72df599e9d8f774d5e',
+          pubx: '9611f38f43d91c8b7af296d99a15bbde28eed632f8b36d72df599e9d8f774d5e',
+          puby: '20b01662da186ac19e1a5abbfdc444963a56deb1ba325a190de856fb3ed45b5b',
         },
         {
-          wif: 'XKRbuCkYL6jZ1WHBtZfHwh6RAeHBCrJeipqZaRMQ71XuAHzwznRR',
-          priv: 'f2cc9d2b008927db94b89e04e2f6e70c180e547b3e5e564b06b8215d1c264b53',
-          pub: '03e275faa35bd1e88f5df6e8f9f6edb93bdf1d65f4915efc79fd7a726ec0c21700',
-          pubx: 'e275faa35bd1e88f5df6e8f9f6edb93bdf1d65f4915efc79fd7a726ec0c21700',
-          puby: '367216cb35b086e6686d69dddd822a8f4d52eb82ac5d9de18fdcd9bf44fa7df7',
+          wif: 'cYqncuJLhvxYrEhNHn2oynniKknkf5jdB1gx1zHKK28RcvvqtPUC',
+          priv: '4ff8d6873852ba5dc0836d815ca1c49b30e27204579d1fdd710436a8a8338915',
+          pub: '02d9bc4f4f126e968fa062b40c2bf7e0bea741138a7b327d2140d2c7f76248344b',
+          pubx: 'd9bc4f4f126e968fa062b40c2bf7e0bea741138a7b327d2140d2c7f76248344b',
+          puby: 'f906518496e753b5660077d83cb3ef36ab0483eef66d289b06edd013bd4d63dc',
         },
       ];
 
@@ -515,7 +515,7 @@ describe('PublicKey', function () {
         '03c87bd0e162f26969da8509cafcb7b8c8d202af30b928c582e263dd13ee9a9781'
       );
       var address = pk.toAddress('livenet');
-      address.toString().should.equal('XjnkiGYQkC3bbAzvDjP7jkNouHCHNRr3ug');
+      address.toString().should.equal('GSwqJ9DTmLSJWhhdHnj1Jz2uz7QSP8eXWh');
     });
 
     it('should output this known testnet address correctly', function () {
@@ -523,7 +523,7 @@ describe('PublicKey', function () {
         '0293126ccc927c111b88a0fe09baa0eca719e2a3e087e8a5d1059163f5c566feef'
       );
       var address = pk.toAddress('testnet');
-      address.toString().should.equal('yZKdLYCvDXa2kyQr8Tg3N6c3xeZoK7XDcj');
+      address.toString().should.equal('nHrjmVrrLUbVrqWRSiM7naz2LXMPRvEzoD');
     });
   });
 
@@ -532,20 +532,20 @@ describe('PublicKey', function () {
     // see: https://github.com/dashpay/dash/blob/master/src/test/key_tests.cpp#L20
     var data = [
       [
-        '7qh6LYnLN2w2ntz2wwUhRUEgkQ2j8XB16FGw77ZRDZmC29bn7cD',
-        'Xywgfc872nn5CKtpATCoAjZCc4v96pJczy',
+        'WKQCxDCKqaVdo1kCWPQL3kK1Ye4yhSU6NxZ3yHnRgNVwHQ3XsbX5',
+        'GYQB3b2EhTHQcPT4SmnFmE8Jmc1a7uTNg1',
       ],
       [
-        '7rve4MxeWFQHGbSYH6J2yaaZd3MBUqoDEwN6ZAZ6ZHmhTT4r3hW',
-        'XpmouUj9KKJ99ZuU331ZS1KqsboeFnLGgK',
+        'WQQxP5YVhxX76kU3cAQyYifibAN8QMp2vqGccUnfLrXLmzcyE9MW',
+        'GRDScwm14buqH1Wv1K6SMwNKGUHa4Jt2nb',
       ],
       [
-        'XBuxZHH6TqXUuaSjbVTFR1DQSYecxCB9QA1Koyx5tTc3ddhqEnhm',
-        'XxV9h4Xmv6Pup8tVAQmH97K6grzvDwMG9F',
+        'WKZFCAsCvsFbcyYrKqyvCyD5xNRGirtfS46xcekwvxA77RtdDf5X',
+        'GYZRiAQRyXnwzgmvv5ma6cisByNhaRc8AU',
       ],
       [
-        'XHMkZqWcY6Zkoq1j42NBijD8z5N5FtNy2Wx7WyAfXX2HZgxry8cr',
-        'Xn7ZrYdExuk79Dm7CJCw7sfUWi2qWJSbRy',
+        'WLi68KLDqpRLKyYLfsAq2e7gR1BfUZpLsfgbZ1ZG3ywdd52veKFd',
+        'GdeF8gUqo3XbagGTnSuEZiSGuwUhCmbZJq',
       ],
     ];
 
@@ -590,13 +590,13 @@ describe('PublicKey', function () {
 
     it('should output known compressed pubkey with network for console', function () {
       var privkey = PrivateKey.fromWIF(
-        'XHWwKGqugqSRkcpuiWyDJXSHhjWGCidZ5HLwf9ScMLaEeDTRHepq'
+        'cc1WuFikmenRcAybBtbq74BXhh1rUspd59fScmMNWuvLjQbowop7'
       );
       var pubkey = new PublicKey(privkey);
       pubkey
         .inspect()
         .should.equal(
-          '<PublicKey: 03c87bd0e162f26969da8509cafcb7b8c8d202af30b928c582e263dd13ee9a9781>'
+          '<PublicKey: 0318a1cf4ba216b1215e8b2520c821a3a49d1751690530d672807f08a74cb6ff5b>'
         );
     });
   });

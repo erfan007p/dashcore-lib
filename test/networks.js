@@ -20,17 +20,17 @@ describe('Networks', function () {
   it('will enable/disable regtest Network', function () {
     networks.enableRegtest();
     networks.testnet.networkMagic.should.deep.equal(
-      Buffer.from('d12bb37a', 'hex')
+      Buffer.from('a1b3d57b', 'hex')
     );
-    networks.testnet.port.should.equal(13455);
+    networks.testnet.port.should.equal(13565);
     networks.testnet.dnsSeeds.should.deep.equal([]);
     networks.testnet.regtestEnabled.should.equal(true);
 
     networks.disableRegtest();
     networks.testnet.networkMagic.should.deep.equal(
-      Buffer.from('a1b3d57b', 'hex')
+      Buffer.from('d12bb37a', 'hex')
     );
-    networks.testnet.port.should.equal(13565);
+    networks.testnet.port.should.equal(13455);
     networks.testnet.dnsSeeds.should.deep.equal([
       'testnet-dns.gobyte.network',
     ]);

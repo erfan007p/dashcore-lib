@@ -47,7 +47,7 @@ describe('URI', function () {
   // TODO: Split this and explain tests
   it('URIs can be validated statically (test vector)', function () {
     URI.isValid('gobyte:GQ9w7ojnrEL286oZsxAQ9gfjQfGFmMoh1m').should.equal(true);
-    URI.isValid('gobyte:yRM2dX5HJyvbFaGubkVPio9W6Y8ELDnJrm').should.equal(true);
+    URI.isValid('gobyte:nKQoud5ZEoaF8TmUFpRqeWGXLw5NeRez89').should.equal(true);
 
     URI.isValid(
       'gobyte:GQ9w7ojnrEL286oZsxAQ9gfjQfGFmMoh1m?amount=1.2'
@@ -60,7 +60,7 @@ describe('URI', function () {
       ['req-other']
     ).should.equal(true);
     URI.isValid(
-      'gobyte:ySfKnKxK4S6TkVg6kyUEdXsoLPoCe4YdVp?amount=0.1&' +
+      'gobyte:nKQoud5ZEoaF8TmUFpRqeWGXLw5NeRez89?amount=0.1&' +
         'r=https%3A%2F%2Ftest.bitpay.com%2Fi%2F6DKgf8cnJC388irbXk5hHu'
     ).should.equal(true);
 
@@ -108,7 +108,7 @@ describe('URI', function () {
     });
 
     it('parses a testnet address', function () {
-      uri = new URI('gobyte:yRM2dX5HJyvbFaGubkVPio9W6Y8ELDnJrm');
+      uri = new URI('gobyte:nKQoud5ZEoaF8TmUFpRqeWGXLw5NeRez89');
       uri.address.should.be.instanceof(bitcore.Address);
       uri.network.should.equal(Networks.testnet);
     });
@@ -155,7 +155,7 @@ describe('URI', function () {
     uri.network.should.equal(Networks.livenet);
 
     uri = new URI({
-      address: 'yRM2dX5HJyvbFaGubkVPio9W6Y8ELDnJrm',
+      address: 'nKQoud5ZEoaF8TmUFpRqeWGXLw5NeRez89',
     });
     uri.address.should.be.instanceof(bitcore.Address);
     uri.network.should.equal(Networks.testnet);
@@ -264,7 +264,7 @@ describe('URI', function () {
 
   it('writes correctly the "r" parameter on string serialization', function () {
     var originalString =
-      'gobyte:ySfKnKxK4S6TkVg6kyUEdXsoLPoCe4YdVp?amount=0.1&' +
+      'gobyte:nKQoud5ZEoaF8TmUFpRqeWGXLw5NeRez89?amount=0.1&' +
       'r=https%3A%2F%2Ftest.bitpay.com%2Fi%2F6DKgf8cnJC388irbXk5hHu';
     var uri = new URI(originalString);
     uri.toString().should.equal(originalString);
