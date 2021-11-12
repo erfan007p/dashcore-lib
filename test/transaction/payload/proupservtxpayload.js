@@ -4,10 +4,10 @@
 var expect = require('chai').expect;
 var sinon = require('sinon');
 
-var DashcoreLib = require('../../../index');
+var GoBytecoreLib = require('../../../index');
 var proUpServTxFixture = require('../../fixtures/payload/proupservpayload');
 
-var ProTxUpServPayload = DashcoreLib.Transaction.Payload.ProTxUpServPayload;
+var ProTxUpServPayload = GoBytecoreLib.Transaction.Payload.ProTxUpServPayload;
 
 describe('ProTxUpServPayload', function () {
   beforeEach(function () {

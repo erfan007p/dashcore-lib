@@ -475,12 +475,12 @@ describe('BIP32 compliance', function () {
       seededKey.deriveChild(vector3_dip14_path_1_m77_f5h).xpubkey.should.equal(vector3_dip14_path_1_m77_f5h_xpubkey)
     });
     
-    it('should derive a Dashpay DIP14 256-bit path correctly from a seed', function() {
+    it('should derive a GoBytepay DIP14 256-bit path correctly from a seed', function() {
       var seededKey = HDPrivateKey.fromSeed(vector3_dip14_master, Networks.testnet);
       seededKey.deriveChild(vector3_dip14_path_2).privateKey.toString('hex').should.equal(vector3_dip14_path_2_private);
     });
     
-    it('should serialize a Dashpay DIP14 256-bit xpubkey and xprivkey correctly', function() {
+    it('should serialize a GoBytepay DIP14 256-bit xpubkey and xprivkey correctly', function() {
       var seededKey = HDPrivateKey.fromSeed(vector3_dip14_master, Networks.testnet);
       seededKey.deriveChild(vector3_dip14_path_2).xprivkey.should.equal(vector3_dip14_path_2_xprivkey);
       seededKey.deriveChild(vector3_dip14_path_2).xpubkey.should.equal(vector3_dip14_path_2_xpubkey);

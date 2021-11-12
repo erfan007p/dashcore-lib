@@ -1,6 +1,6 @@
 # Encoding
 
-The `dashcore.Encoding` namespace contains utilities for encoding information in common formats in the Dash ecosystem.
+The `gobytecore.Encoding` namespace contains utilities for encoding information in common formats in the GoByte ecosystem.
 
 ## Base58 & Base58Check
 

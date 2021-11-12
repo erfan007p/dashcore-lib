@@ -25,10 +25,10 @@ describe('GovObject', function () {
         name: 'TestProposal',
         start_epoch: Math.round(new Date('2015-10-10').getTime() / 1000),
         end_epoch: Math.round(new Date('2025-10-10').getTime() / 1000),
-        payment_address: 'yXGeNPQXYFXhLAN1ZKrAjxzzBnZ2JZNKnh',
+        payment_address: 'nBPubv7rUxwCrWjry5PKvxV6iEnWF27AAP',
         payment_amount: 10,
         type: 1,
-        url: 'http://www.dash.org',
+        url: 'http://gobyte.network',
       };
 
       govObject = govObject.fromObject(jsonProposal);
@@ -43,43 +43,43 @@ describe('GovObject', function () {
     it('should validate address', function () {
       var govObject = new GovObject();
       govObject
-        ._verifyAddress('yXGeNPQXYFXhLAN1ZKrAjxzzBnZ2JZNKnh', 'testnet')
+        ._verifyAddress('nBPubv7rUxwCrWjry5PKvxV6iEnWF27AAP', 'testnet')
         .should.equal(true);
       govObject
-        ._verifyAddress('XuYDEzZzKxnknPDiVKe91sJaD1nQnnn5B6', 'livenet')
+        ._verifyAddress('GQ9w7ojnrEL286oZsxAQ9gfjQfGFmMoh1m', 'livenet')
         .should.equal(true);
       govObject
         ._verifyAddress(
-          'XuYDEzZzKxn&&knPDiVKe91sJasfajkshfjD1nQnnn5B6',
+          'GQ9w7ojnrEL286oZsxAQ9gf&&fGFmMoh1m',
           'livenet'
         )
         .should.equal(false);
       govObject
-        ._verifyAddress('knPDiVKe91sJasfajkshfjD1nQnnn5B6', 'testnet')
+        ._verifyAddress('oQ9w7ojnrEL286oZsxAQ9gfjQfGFmMoh1m', 'testnet')
         .should.equal(false);
       govObject
         ._verifyAddress(
-          'XuYDEzZzKxn&&knPDiVKe91sJa/sfajkshfjD1nQnnn5B6',
+          'GQ9w7ojnrEL286//sxAQ9gfjQfGFmMoh1m',
           'livenet'
         )
         .should.equal(false);
       govObject
-        ._verifyAddress('XuYDEzZzKxnknPDiVKe91sJaD1nQnnn5B', 'livenet')
+        ._verifyAddress('GQ9w7ojnrEL286!2@xAQ9gfjQfGFmMoh1m', 'livenet')
         .should.equal(false);
       govObject
-        ._verifyAddress(' XuYDEzZzKxnknPDiVKe91sJaD1nQnnn5B', 'livenet')
+        ._verifyAddress(' GQ9w7ojnrEL286oZsxAQ9gfjQfGFmMoh1m', 'livenet')
         .should.equal(false);
       govObject
-        ._verifyAddress('XuYDEzZzKxnknPDiVKe91sJaD1nQnnn5B ', 'livenet')
+        ._verifyAddress('GQ9w7*//rEL286oZsxAQ9gfjQfGFmMoh1m ', 'livenet')
         .should.equal(false);
       govObject
-        ._verifyAddress('$XuYDEzZzKxnknPDiVKe91sJaD1nQnnn5B', 'livenet')
+        ._verifyAddress('$GQ9w7ojnrEL286oZsxAQ9gfjQfGFmMoh1m', 'livenet')
         .should.equal(false);
       govObject
-        ._verifyAddress('yXGeNPQXYFXhLAN1ZKrAjxzzBnZ2JZNKnh', 'livenet')
+        ._verifyAddress('nBPubv7rUxwCrWjry5PKvxV6iEnWF27AAP', 'livenet')
         .should.equal(false);
       govObject
-        ._verifyAddress('XuYDEzZzKxnknPDiVKe91sJaD1nQnnn5B6', 'testnet')
+        ._verifyAddress('GQ9w7ojnrEL286oZsxAQ9gfjQfGFmMoh1m', 'testnet')
         .should.equal(false);
     });
     it('should cast a stringified JSON Proposal into a Proposal Object', function () {
@@ -89,10 +89,10 @@ describe('GovObject', function () {
         name: 'TestProposal',
         start_epoch: Math.round(new Date('2015-10-10').getTime() / 1000),
         end_epoch: Math.round(new Date('2025-10-10').getTime() / 1000),
-        payment_address: 'yXGeNPQXYFXhLAN1ZKrAjxzzBnZ2JZNKnh',
+        payment_address: 'nBPubv7rUxwCrWjry5PKvxV6iEnWF27AAP',
         payment_amount: 10,
         type: 1,
-        url: 'http://www.dash.org',
+        url: 'http://gobyte.network',
       };
 
       var govObject = govObject.fromObject(JSON.stringify(jsonProposal));
@@ -108,10 +108,10 @@ describe('GovObject', function () {
         name: 'TestProposal',
         start_epoch: Math.round(new Date('2015-10-10').getTime() / 1000),
         end_epoch: Math.round(new Date('2025-10-10').getTime() / 1000),
-        payment_address: 'yXGeNPQXYFXhLAN1ZKrAjxzzBnZ2JZNKnh',
+        payment_address: 'nBPubv7rUxwCrWjry5PKvxV6iEnWF27AAP',
         payment_amount: 10,
         type: 1,
-        url: 'http://www.dash.org',
+        url: 'http://gobyte.network',
       };
       var govObject = govObject.fromObject(jsonProposal);
       var newGovObject = new GovObject(govObject);
@@ -135,10 +135,10 @@ describe('GovObject', function () {
         name: 'TestProposal',
         start_epoch: Math.round(new Date('2015-10-10').getTime() / 1000),
         end_epoch: Math.round(new Date('2025-10-10').getTime() / 1000),
-        payment_address: 'yXGeNPQXYFXhLAN1ZKrAjxzzBnZ2JZNKnh',
+        payment_address: 'nBPubv7rUxwCrWjry5PKvxV6iEnWF27AAP',
         payment_amount: 10,
         type: 1,
-        url: 'http://www.dash.org',
+        url: 'http://gobyte.network',
       };
       var govObject = govObject.fromObject(jsonProposal);
 
@@ -164,10 +164,10 @@ describe('GovObject', function () {
         name: 'TestProposal',
         start_epoch: Math.round(new Date('2015-10-10').getTime() / 1000),
         end_epoch: Math.round(new Date('2025-10-10').getTime() / 1000),
-        payment_address: 'yXGeNPQXYFXhLAN1ZKrAjxzzBnZ2JZNKnh',
+        payment_address: 'nBPubv7rUxwCrWjry5PKvxV6iEnWF27AAP',
         payment_amount: 10,
         type: 1,
-        url: 'http://www.dash.org',
+        url: 'http://gobyte.network',
       };
       var govObject = govObject.fromObject(jsonProposal);
       var govObject2 = new GovObject();
@@ -194,10 +194,10 @@ describe('GovObject', function () {
         name: 'TestProposal',
         start_epoch: Math.round(new Date('2015-10-10').getTime() / 1000),
         end_epoch: Math.round(new Date('2025-10-10').getTime() / 1000),
-        payment_address: 'yXGeNPQXYFXhLAN1ZKrAjxzzBnZ2JZNKnh',
+        payment_address: 'nBPubv7rUxwCrWjry5PKvxV6iEnWF27AAP',
         payment_amount: 10,
         type: 1,
-        url: 'http://www.dash.org',
+        url: 'http://gobyte.network',
       };
       var govObject = govObject.fromObject(jsonProposal);
       var govFromHexa = new GovObject();
@@ -215,10 +215,10 @@ describe('GovObject', function () {
         name: 'TestProposal',
         start_epoch: Math.round(new Date('2015-10-10').getTime() / 1000),
         end_epoch: Math.round(new Date('2025-10-10').getTime() / 1000),
-        payment_address: 'yXGeNPQXYFXhLAN1ZKrAjxzzBnZ2JZNKnh',
+        payment_address: 'nBPubv7rUxwCrWjry5PKvxV6iEnWF27AAP',
         payment_amount: 10,
         type: 1,
-        url: 'http://www.dash.org',
+        url: 'http://gobyte.network',
       };
       var stringified = JSON.stringify(jsonProposal);
       stringified += 'foobar';
@@ -237,9 +237,9 @@ describe('GovObject', function () {
         name: 'TestProposal',
         start_epoch: Math.round(new Date('2015-10-10').getTime() / 1000),
         end_epoch: Math.round(new Date('2025-10-10').getTime() / 1000),
-        payment_address: 'yXGeNPQXYFXhLAN1ZKrAjxzzBnZ2JZNKnh',
+        payment_address: 'nBPubv7rUxwCrWjry5PKvxV6iEnWF27AAP',
         payment_amount: 10,
-        url: 'http://www.dash.org',
+        url: 'http://gobyte.network',
       };
 
       var govObjRes = function () {
@@ -259,9 +259,9 @@ describe('GovObject', function () {
         type: 'foobar',
         start_epoch: Math.round(new Date('2015-10-10').getTime() / 1000),
         end_epoch: Math.round(new Date('2025-10-10').getTime() / 1000),
-        payment_address: 'yXGeNPQXYFXhLAN1ZKrAjxzzBnZ2JZNKnh',
+        payment_address: 'nBPubv7rUxwCrWjry5PKvxV6iEnWF27AAP',
         payment_amount: 10,
-        url: 'http://www.dash.org',
+        url: 'http://gobyte.network',
       };
 
       var govObjRes = function () {
@@ -281,9 +281,9 @@ describe('GovObject', function () {
         type: 42,
         start_epoch: Math.round(new Date('2015-10-10').getTime() / 1000),
         end_epoch: Math.round(new Date('2025-10-10').getTime() / 1000),
-        payment_address: 'yXGeNPQXYFXhLAN1ZKrAjxzzBnZ2JZNKnh',
+        payment_address: 'nBPubv7rUxwCrWjry5PKvxV6iEnWF27AAP',
         payment_amount: 10,
-        url: 'http://www.dash.org',
+        url: 'http://gobyte.network',
       };
       var govObjRes = function () {
         return govObject.fromObject(jsonProposal);
@@ -313,10 +313,10 @@ describe('GovObject', function () {
         name: 'TestProposal',
         start_epoch: Math.round(new Date('2015-10-10').getTime() / 1000),
         end_epoch: Math.round(new Date('2025-10-10').getTime() / 1000),
-        payment_address: 'yXGeNPQXYFXhLAN1ZKrAjxzzBnZ2JZNKnh',
+        payment_address: 'nBPubv7rUxwCrWjry5PKvxV6iEnWF27AAP',
         payment_amount: 10,
         type: 1,
-        url: 'http://www.dash.org',
+        url: 'http://gobyte.network',
       };
       var govObject = govObject.fromObject(jsonProposal);
       govObject.serialize().should.equal(expectedHex);
@@ -329,10 +329,10 @@ describe('GovObject', function () {
         name: 'TestProposal',
         start_epoch: Math.round(new Date('2015-10-10').getTime() / 1000),
         end_epoch: Math.round(new Date('2025-10-10').getTime() / 1000),
-        payment_address: 'yXGeNPQXYFXhLAN1ZKrAjxzzBnZ2JZNKnh',
+        payment_address: 'nBPubv7rUxwCrWjry5PKvxV6iEnWF27AAP',
         payment_amount: 10,
         type: 1,
-        url: 'http://www.dash.org',
+        url: 'http://gobyte.network',
       };
       var govObject = govObject.fromObject(jsonProposal);
       govObject.inspect().should.equal('<GovObject: ' + expectedHex + '>');
@@ -347,7 +347,7 @@ describe('GovObject', function () {
         event_block_height: 110976,
         network: 'testnet',
         payment_addresses:
-          'yXGeNPQXYFXhLAN1ZKrAjxzzBnZ2JZNKnh|yXBj864aMJ4bNM3uTWrs6ebXdRBsTbeA9y',
+          'nBPubv7rUxwCrWjry5PKvxV6iEnWF27AAP|nL4QwjvS8tTWWZPzrpoEUjcAgrpyAW5zzv',
         payment_amounts: '10.00000000|12.00000000',
         proposal_hashes:
           '20596d41ac6c9f6bfb9a02e43cd77ef1ed1a0e9d70857e5110e6aa9de0ce12fb|6767927761890eefaa6f80542aad6981fb966eed7c1deaf616464a739d81b8d7',
@@ -373,7 +373,7 @@ describe('GovObject', function () {
   });
 });
 var expectedHex =
-  '7b22656e645f65706f6368223a313736303035343430302c226e616d65223a225465737450726f706f73616c222c227061796d656e745f61646472657373223a22795847654e505158594658684c414e315a4b72416a787a7a426e5a324a5a4e4b6e68222c227061796d656e745f616d6f756e74223a31302c2273746172745f65706f6368223a313434343433353230302c2274797065223a312c2275726c223a22687474703a2f2f7777772e646173682e6f7267227d';
+  '7b22656e645f65706f6368223a313736303035343430302c226e616d65223a225465737450726f706f73616c222c227061796d656e745f61646472657373223a226e425075627637725578774372576a727935504b7678563669456e57463237414150222c227061796d656e745f616d6f756e74223a31302c2273746172745f65706f6368223a313434343433353230302c2274797065223a312c2275726c223a22687474703a2f2f676f627974652e6e6574776f726b227d';
 //Polyfill for object.assign (not supported in 0.10.25);
 Object._assign = function (target, varArgs) {
   // .length of function is 2

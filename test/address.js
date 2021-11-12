@@ -24,7 +24,7 @@ describe('Address', function () {
     'hex'
   );
   var buf = Buffer.concat([Buffer.from([0x4c]), pubkeyhash]);
-  var str = 'XgBQcYbKff4q7cEs7AaxoPN2CAiBbFc2JT';
+  var str = 'GPLVCRGNgoTY38waBDvrNd28GzvLc1t5nk';
 
   it("can't build without data", function () {
     (function () {
@@ -486,7 +486,7 @@ describe('Address', function () {
   });
 
   describe('#toBuffer', function () {
-    it('3c3fa3d4adcaf8f52d5b1843975e122548269937 corresponds to hash XgBQcYbKff4q7cEs7AaxoPN2CAiBbFc2JT', function () {
+    it('3c3fa3d4adcaf8f52d5b1843975e122548269937 corresponds to hash GPLVCRGNgoTY38waBDvrNd28GzvLc1t5nk', function () {
       var address = new Address(str);
       address
         .toBuffer()
@@ -536,7 +536,7 @@ describe('Address', function () {
     it('should output formatted output correctly', function () {
       var address = new Address(str);
       var output =
-        '<Address: XgBQcYbKff4q7cEs7AaxoPN2CAiBbFc2JT, type: pubkeyhash, network: livenet>';
+        '<Address: GPLVCRGNgoTY38waBDvrNd28GzvLc1t5nk, type: pubkeyhash, network: livenet>';
       address.inspect().should.equal(output);
     });
   });

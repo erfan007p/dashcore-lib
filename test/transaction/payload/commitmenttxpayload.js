@@ -4,10 +4,10 @@
 var expect = require('chai').expect;
 var sinon = require('sinon');
 
-var DashcoreLib = require('../../../index');
+var GoBytecoreLib = require('../../../index');
 
-var Transaction = DashcoreLib.Transaction;
-var CommitmentTxPayload = DashcoreLib.Transaction.Payload.CommitmentTxPayload;
+var Transaction = GoBytecoreLib.Transaction;
+var CommitmentTxPayload = GoBytecoreLib.Transaction.Payload.CommitmentTxPayload;
 
 var validCommitmentTxPayloadJSON = {
   version: 1,

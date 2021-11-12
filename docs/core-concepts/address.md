@@ -1,6 +1,6 @@
-# Dash Address
+# GoByte Address
 
-Represents a Dash address. Addresses are the most popular way to make Dash transactions. See [the Dash documentation](https://dash-docs.github.io/en/glossary/address) for technical background information.
+Represents a GoByte address. Addresses are the most popular way to make GoByte transactions. See [the GoByte documentation](https://gobyte-coin.readthedocs.io/en/stable/introduction/information.html#glossary) for technical background information.
 
 ## Instantiate an Address
 
@@ -15,7 +15,7 @@ You can also instantiate an Address from a String, [PublicKey](publickey.md), or
 
 ```javascript
 // from a string
-var address = Address.fromString('XuUGDZHrKLo841CyamDbG5W7n59epA71h2');
+var address = Address.fromString('GQ9w7ojnrEL286oZsxAQ9gfjQfGFmMoh1m');
 
 // a default network address from a public key
 var publicKey = PublicKey(privateKey);
@@ -37,7 +37,7 @@ var p2shAddress = new Address([publicKey1, publicKey2, publicKey3], 2);
 
 ## Validating an Address
 
-The main use that we expect you'll have for the `Address` class in Dashcore is validating that an address is a valid one, what type of address it is (you may be interested on knowing if the address is a simple "pay to public key hash" address or a "pay to script hash" address) and what network does the address belong to.
+The main use that we expect you'll have for the `Address` class in GoBytecore is validating that an address is a valid one, what type of address it is (you may be interested on knowing if the address is a simple "pay to public key hash" address or a "pay to script hash" address) and what network does the address belong to.
 
 The code to do these validations looks like this:
 
@@ -65,4 +65,4 @@ var error = Address.getValidationError(input, Networks.testnet);
 }
 ```
 
-The errors are listed in the generated file in the [errors folder](https://github.com/dashevo/bitcore-dash/tree/master/lib/errors). There's a structure to errors defined in the [spec.js file](https://github.com/dashevo/bitcore-dash/tree/master/lib/errors/spec.js).
+The errors are listed in the generated file in the [errors folder](https://github.com/gobytecoin/bitcore-gobyte/tree/master/lib/errors). There's a structure to errors defined in the [spec.js file](https://github.com/gobytecoin/bitcore-gobyte/tree/master/lib/errors/spec.js).

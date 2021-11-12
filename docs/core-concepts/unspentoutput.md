@@ -1,6 +1,6 @@
 # UnspentOutput
 
-`dashcore.Transaction.UnspentOutput` is a class with stateless instances that provides information about an unspent output:
+`gobytecore.Transaction.UnspentOutput` is a class with stateless instances that provides information about an unspent output:
 
 - Transaction ID and output index
 - The "scriptPubKey", the script included in the output
@@ -22,14 +22,14 @@ The constructor is quite permissive with the input arguments. It can take output
 var utxo = new UnspentOutput({
   txid: '3912bd2b0c78706db809fff3ab51ac81ef20e0a53f61e4a2369cff0c4084c55c',
   vout: 0,
-  address: 'XuUGDZHrKLo841CyamDbG5W7n59epA71h2',
+  address: 'GQ9w7ojnrEL286oZsxAQ9gfjQfGFmMoh1m',
   scriptPubKey: '76a914fd1a0216dc01bc90b68b39bbe755de834be5dddd88ac',
   amount: 4.22900307,
 });
 var utxo = new UnspentOutput({
   txId: '3912bd2b0c78706db809fff3ab51ac81ef20e0a53f61e4a2369cff0c4084c55c',
   outputIndex: 0,
-  address: 'XuUGDZHrKLo841CyamDbG5W7n59epA71h2',
+  address: 'GQ9w7ojnrEL286oZsxAQ9gfjQfGFmMoh1m',
   script: '76a914fd1a0216dc01bc90b68b39bbe755de834be5dddd88ac',
   satoshis: 422900307,
 });
