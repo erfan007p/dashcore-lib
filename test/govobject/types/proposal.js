@@ -140,7 +140,7 @@ describe('Proposal', function () {
     proposal.network = 'testnet';
     proposal.end_epoch = endDate;
     proposal.name = 'TestProposal';
-    proposal.payment_address = '8tS9fgiv8XAmTXxWqJBv7zbeS4jzrGGwxT';
+    proposal.payment_address = '96jZgKSr8FCu47dfrJpghhKYdXucmY2Dph';
     proposal.payment_amount = 10;
     proposal.start_epoch = startDate;
     proposal.type = 1;
@@ -150,7 +150,7 @@ describe('Proposal', function () {
     proposal2.network = 'livenet';
     proposal2.end_epoch = endDate;
     proposal2.name = 'Proposal-36-GoByteATM';
-    proposal2.payment_address = '7Z7X2jaqMtzsr2oHpSn89cNaEC16DYByz3';
+    proposal2.payment_address = '5Dzk2kTvrfZNpMPhqbpdAA4t66LACCeCrA';
     proposal2.payment_amount = 1625.487;
     proposal2.start_epoch = startDate;
     proposal2.type = 1;

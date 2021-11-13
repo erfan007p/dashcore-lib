@@ -50,36 +50,36 @@ describe('GovObject', function () {
         .should.equal(true);
       govObject
         ._verifyAddress(
-          'GQ9w7ojnrEL286oZsxAQ9gf&&fGFmMoh1m',
+          'nBPubv7rUxwCrWjry5PKvxV6iEnWF27AAP',
           'livenet'
         )
-        .should.equal(false);
-      govObject
-        ._verifyAddress('oQ9w7ojnrEL286oZsxAQ9gfjQfGFmMoh1m', 'testnet')
-        .should.equal(false);
-      govObject
-        ._verifyAddress(
-          'GQ9w7ojnrEL286//sxAQ9gfjQfGFmMoh1m',
-          'livenet'
-        )
-        .should.equal(false);
-      govObject
-        ._verifyAddress('GQ9w7ojnrEL286!2@xAQ9gfjQfGFmMoh1m', 'livenet')
-        .should.equal(false);
-      govObject
-        ._verifyAddress(' GQ9w7ojnrEL286oZsxAQ9gfjQfGFmMoh1m', 'livenet')
-        .should.equal(false);
-      govObject
-        ._verifyAddress('GQ9w7*//rEL286oZsxAQ9gfjQfGFmMoh1m ', 'livenet')
-        .should.equal(false);
-      govObject
-        ._verifyAddress('$GQ9w7ojnrEL286oZsxAQ9gfjQfGFmMoh1m', 'livenet')
-        .should.equal(false);
-      govObject
-        ._verifyAddress('nBPubv7rUxwCrWjry5PKvxV6iEnWF27AAP', 'livenet')
         .should.equal(false);
       govObject
         ._verifyAddress('GQ9w7ojnrEL286oZsxAQ9gfjQfGFmMoh1m', 'testnet')
+        .should.equal(false);
+      govObject
+        ._verifyAddress(
+          'nBPubv7rUxwCrWjry5PKvxV6iEnWF27AAP',
+          'livenet'
+        )
+        .should.equal(false);
+      govObject
+        ._verifyAddress('nKQoud5ZEoaF8TmUFpRqeWGXLw5NeRez89', 'livenet')
+        .should.equal(false);
+      govObject
+        ._verifyAddress(' nCE5UypKbxCfo5qKpMk2FDWXqoMNiZZAHC', 'livenet')
+        .should.equal(false);
+      govObject
+        ._verifyAddress('nKa4aCTkWt5nWm6Lj8R9yts5mJSWBsLaRZ ', 'livenet')
+        .should.equal(false);
+      govObject
+        ._verifyAddress('GYZRiAQRyXnwzgmvv5ma6cisByNhaRc8AU', 'livenet')
+        .should.equal(false);
+      govObject
+        ._verifyAddress('nQesziYALPpS6kasbVYpSzaVVGYVnE2w4w', 'livenet')
+        .should.equal(false);
+      govObject
+        ._verifyAddress('nBPubv7rUxwCrWjry5PKvxV6iEnWF27AAP', 'testnet')
         .should.equal(false);
     });
     it('should cast a stringified JSON Proposal into a Proposal Object', function () {

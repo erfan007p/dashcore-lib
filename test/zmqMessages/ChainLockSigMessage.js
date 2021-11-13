@@ -25,7 +25,7 @@ describe('ChainLockSigMessage', function () {
     blockObject = {
       header: {
         bits: 503445090,
-        hash: '000000c546f0fdf0e20432a309e64ed75f05a6fdbb503bee46c813af6d4ef46d',
+        hash: '8957671a89056f56e65126992ca51e65ca53f65e1ea63f66db1bfe9af2c77536',
         merkleRoot:
           '22b9b6dde8516991186f77687e49b4c09eb96e5d2adebdf1e0ae9a01251c13ee',
         nonce: 35025,
