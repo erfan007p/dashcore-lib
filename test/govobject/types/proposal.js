@@ -554,9 +554,7 @@ describe('Proposal', function () {
     expect(proposal1.payment_address).to.equal(
       'nBPubv7rUxwCrWjry5PKvxV6iEnWF27AAP'
     );
-    expect(proposal1.url).to.equal(
-      'https://gobyte.network'
-    );
+    expect(proposal1.url).to.equal('https://gobyte.network');
 
     var proposal2 = new Proposal(datahex2);
     //We expect to be a different datahex2 as input is an object, and output will be an array (default).

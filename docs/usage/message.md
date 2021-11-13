@@ -62,8 +62,8 @@ If it isn't the specific reason is accessible via the "error" member.
 
 **Parameters**:
 
-| parameter   | type           | required | Description    |
-| ----------- | -------------- | -------- | -------------- |
+| parameter   | type           | required | Description      |
+| ----------- | -------------- | -------- | ---------------- |
 | **address** | Address/String | yes      | A gobyte address |
 
 **Returns**: {Boolean}

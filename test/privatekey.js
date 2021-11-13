@@ -22,9 +22,11 @@ describe('PrivateKey', function () {
   var hex2 = '8080808080808080808080808080808080808080808080808080808080808080';
   var buf = Buffer.from(hex, 'hex');
   var wifTestnet = 'cciR3ts1YoywnH2UtQQFeiouX3wcT7EeeYYtfrBmRR6SdWHR1YJf';
-  var wifTestnetUncompressed = '951msVyBzxWDQrPzXE1HTfvg5zm6K9fSJ7hJbdX5dLxcGAv5omS';
+  var wifTestnetUncompressed =
+    '951msVyBzxWDQrPzXE1HTfvg5zm6K9fSJ7hJbdX5dLxcGAv5omS';
   var wifLivenet = 'WKQCxDCKqaVdo1kCWPQL3kK1Ye4yhSU6NxZ3yHnRgNVwHQ3XsbX5';
-  var wifLivenetUncompressed = '7eFKZu9ukdb8RvdyXg4URe118AkwzCD2fxdiTM7ffpvECydN3PR';
+  var wifLivenetUncompressed =
+    '7eFKZu9ukdb8RvdyXg4URe118AkwzCD2fxdiTM7ffpvECydN3PR';
   var wifNamecoin = '74pxNKNpByQ2kMow4d9kF6Z77BYeKztQNLq3dSyU4ES1K5KLNiz';
 
   it('should create a new random private key', function () {

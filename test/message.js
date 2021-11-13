@@ -101,7 +101,7 @@ describe('Message', function () {
     verified.should.equal(true);
   });
 
-  it('will not verify with address mismatch' , function () {
+  it('will not verify with address mismatch', function () {
     var message10 = new Message(text);
     var verified = message10.verify(badAddress, signatureString);
     should.exist(message10.error);

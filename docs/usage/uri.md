@@ -3,10 +3,10 @@
 All instances of URI are valid, the static method isValid allows checking before instantiation.
 All standard parameters can be found as members of the class, the address is represented using an {Address} instance and the amount is represented in satoshis. Any other non-standard parameters can be found under the extra member.
 
-| parameters      | type                 | required | Description                    |
-| --------------- | -------------------- | -------- | ------------------------------ |
+| parameters      | type                 | required | Description                      |
+| --------------- | -------------------- | -------- | -------------------------------- |
 | **data**        | Object/Buffer/String | yes      | A GoByte URI string or an Object |
-| **knownParams** | String[]             | yes      | Required non-standard params   |
+| **knownParams** | String[]             | yes      | Required non-standard params     |
 
 **Returns**: {URI} A new valid and frozen instance of URI
 
@@ -40,8 +40,8 @@ All standard parameters can be found as members of the class, the address is rep
 
 **Parameters**:
 
-| parameter | type   | required | Description       |
-| --------- | ------ | -------- | ----------------- |
+| parameter | type   | required | Description         |
+| --------- | ------ | -------- | ------------------- |
 | **uri**   | String | yes      | A gobyte URI string |
 
 **Returns**: {Object} An object with the parsed params
@@ -56,8 +56,8 @@ const isValid = URI.isValid('gobyte:GQ9w7ojnrEL286oZsxAQ9gfjQfGFmMoh1m'); //true
 
 **Parameters**:
 
-| parameter | type   | required | Description       |
-| --------- | ------ | -------- | ----------------- |
+| parameter | type   | required | Description         |
+| --------- | ------ | -------- | ------------------- |
 | **uri**   | String | yes      | A gobyte URI string |
 
 Returns : {Object} An object with the parsed params

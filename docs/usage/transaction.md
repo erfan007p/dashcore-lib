@@ -227,10 +227,10 @@ Beware that this resets all the signatures for inputs (in further versions, SIGH
 
 **Parameters**:
 
-| parameter   | type           | required | Description                 |
-| ----------- | -------------- | -------- | --------------------------- |
+| parameter   | type           | required | Description                   |
+| ----------- | -------------- | -------- | ----------------------------- |
 | **address** | Address/String | yes      | An address to send gobyte to. |
-| **amount**  | Number         | yes      | in satoshis                 |
+| **amount**  | Number         | yes      | in satoshis                   |
 
 **Returns**: Transaction
 

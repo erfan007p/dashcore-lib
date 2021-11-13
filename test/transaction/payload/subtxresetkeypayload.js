@@ -4,7 +4,8 @@
 var expect = require('chai').expect;
 var sinon = require('sinon');
 var GoBytecoreLib = require('../../../index');
-var SubTxResetKeyPayload = GoBytecoreLib.Transaction.Payload.SubTxResetKeyPayload;
+var SubTxResetKeyPayload =
+  GoBytecoreLib.Transaction.Payload.SubTxResetKeyPayload;
 var PrivateKey = GoBytecoreLib.PrivateKey;
 var BufferUtil = GoBytecoreLib.util.buffer;
 var isHexString = GoBytecoreLib.util.js.isHexaString;

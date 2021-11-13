@@ -31,9 +31,7 @@ describe('Networks', function () {
       Buffer.from('d12bb37a', 'hex')
     );
     networks.testnet.port.should.equal(13455);
-    networks.testnet.dnsSeeds.should.deep.equal([
-      'testnet-dns.gobyte.network',
-    ]);
+    networks.testnet.dnsSeeds.should.deep.equal(['testnet-dns.gobyte.network']);
   });
 
   it('will get network based on string "regtest" value', function () {
