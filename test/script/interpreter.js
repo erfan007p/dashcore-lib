@@ -147,11 +147,11 @@ describe('Interpreter', function () {
     it('should verify these simple transaction', function () {
       // first we create a transaction
       var privateKey = new PrivateKey(
-        'cSBnVM4xvxarwGQuAfQFwqDg9k5tErHUHzgWsEfD4zdwUasvqRVY'
+        'cc1WuFikmenRcAybBtbq74BXhh1rUspd59fScmMNWuvLjQbowop7'
       );
       var publicKey = privateKey.publicKey;
       var fromAddress = publicKey.toAddress();
-      var toAddress = 'yXGeNPQXYFXhLAN1ZKrAjxzzBnZ2JZNKnh';
+      var toAddress = 'n9USiGWC6aJGKVDDEteAkWJS27Z1ZMBtun';
       var scriptPubkey = Script.buildPublicKeyHashOut(fromAddress);
       var utxo = {
         address: fromAddress,
