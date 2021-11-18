@@ -121,7 +121,6 @@
   },
   "homepage": "https://github.com/gobytecoin/gobytecore-lib",
   "dependencies": {
-    "multi-hashing": "=1.0.1",
     "@types/node": "^12.12.47",
     "bloom-filter": "^0.2.0",
     "bls-signatures": "^0.2.5",
